@@ -1,7 +1,5 @@
 package PracticeOfArrays;
 
-import java.util.Arrays;
-
 public class SumOfItemsInArray {
 
     public static void main(String[] args) {
@@ -12,7 +10,8 @@ public class SumOfItemsInArray {
         for (int num : nums) {
             sum += num;
         }
-        System.out.println(sum);
+        System.out.println("Sayilarin toplami: " + sum);
+
 
         int[] numss = {1,2,3,4,5,4};
         int mal =1;
@@ -20,7 +19,17 @@ public class SumOfItemsInArray {
         for (int each : numss) {
             mal *= each;
         }
+        System.out.println("Sayilarin carpimi: " + mal);
 
-        System.out.println(mal);
+        int[] arr = {34,-56,534,-344,67,87,-98,13};
+        int sum1 = 0;
+
+        for (int each: arr){
+            sum1 += each;
+        }
+
+        double average = (double) sum1 / arr.length;
+        System.out.println("arr listesinin sayi degerlerinin ortalamasi: " + average);
+
     }
 }
