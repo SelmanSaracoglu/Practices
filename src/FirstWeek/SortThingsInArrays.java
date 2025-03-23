@@ -13,7 +13,7 @@ public class SortThingsInArrays {
         System.out.println(Arrays.toString(arrayNumbr));
         System.out.println(Arrays.toString(arrayWords));
 
-        int[] numbers = {2,6,7,11,35};
+        int[] numbers = {2,6,7,11,35,67};
         Arrays.fill(numbers,4);
         System.out.println(Arrays.toString(numbers));
 
