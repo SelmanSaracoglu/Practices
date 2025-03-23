@@ -1,4 +1,4 @@
-package FirstWeek;
+package PracticeOfArrays;
 
 import java.util.Arrays;
 
