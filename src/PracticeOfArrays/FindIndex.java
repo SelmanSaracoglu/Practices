@@ -26,7 +26,7 @@ public class FindIndex {
 
         // Primitif int[] dizisiyle Arrays.asList().indexOf() kullanamazsınız
         Integer [] arrays = {12, 15, 43, 23, 56, 76, 78, 90, 77, 43};
-        int index2 = Arrays.asList(arrays).indexOf(43);
+        int index2 = Arrays.asList(arrays).indexOf(56);
         System.out.println("Aranan değerin indeksi: " + index2);
     }
 
