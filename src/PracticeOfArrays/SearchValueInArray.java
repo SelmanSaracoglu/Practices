@@ -14,6 +14,19 @@ public class SearchValueInArray {
         // Metot çağırarak arama yap
         System.out.println(search + " array içinde bulundu mu? : " + contains(numbers,search));
 
+        System.out.println("For loop için Aranacak degeri giriniz: ");
+        int search1 = scanner.nextInt();
+        boolean found = false;
+
+        for ( int each : numbers ) {
+            if (each == search1){
+                found = true;
+                break;
+            }
+        }
+        System.out.println(search1 + " array içinde bulundu mu? : " + found);
+
+
     }
 
         // Metot: Dizide bir elemanın olup olmadığını kontrol eder.
