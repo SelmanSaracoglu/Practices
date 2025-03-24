@@ -7,7 +7,7 @@ public class ArrayToArrayList {
 
     public static void main(String[] args) {
 
-        String[] array = { "Python", "JAVA", "PHP", "Perl", "C#", "C++" };
+        String[] array = { "Python", "JAVA", "PHP", "Perl", "C#", "C++", "Kanka"};
 
         // Array'i ArrayList'e çevirme
         ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(array));
