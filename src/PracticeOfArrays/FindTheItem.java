@@ -9,6 +9,8 @@ public class FindTheItem {
         // Örnek bir array listesi
         int[] numbers = {12, 35, 1, 10, 34, 1, -1, -9, -12, 17, 56,98,-46};
 
+
+        //Array'i tersten yazdır
         System.out.println("Array'i tersten yazdır.");
 
         ArrayList<Integer> reversedList = new ArrayList<>();
@@ -19,6 +21,8 @@ public class FindTheItem {
         System.out.println("Ters çevrilmiş liste:");
         System.out.println(reversedList);
 
+
+        // En büyük 2. sayi ve en kucuk sayi yazdir.
         Arrays.sort(numbers);
 
         System.out.println(Arrays.toString(numbers)); // Array yazdırmak için kullanılır.
@@ -27,6 +31,20 @@ public class FindTheItem {
         int smallest = numbers[0];
         System.out.println("Array'deki 2. en buyuk sayi: " + secondLargest);
         System.out.println("Array'deki en kucuk sayi: " + smallest);
+
+        // Ortalama yazdir.
+
+        int toplam = 0;
+
+        for (int number : numbers) {
+            toplam += number;
+        }
+
+        double ortlamaDeger = (double) toplam / numbers.length;
+        System.out.println("Toplam deger: " + toplam);
+        System.out.println("Ortalama Deger: " + ortlamaDeger);
+
+        // Negatif sayiları saydır.
 
         int count = 0;
         for (int number : numbers) {
@@ -38,6 +56,7 @@ public class FindTheItem {
 
         System.out.println();
 
+        // Cift sayilari yazdir.
         ArrayList<Integer> evenNumbers = new ArrayList<>(); // Çift sayıları tutmak için bir ArrayList oluşturuyoruz
         int sayac = 0;
         for (int number : numbers) {
