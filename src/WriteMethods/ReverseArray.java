@@ -17,7 +17,7 @@ public class ReverseArray {
 
         String reversedInput = reverseString(input);
         System.out.println("Ters çevrilmiş kelime: " + reversedInput);
-        scanner.close();
+
 
         System.out.println("=============================================================");
 
@@ -29,8 +29,18 @@ public class ReverseArray {
 
         int[] arr3 = {1, 2, 3, 4, 5};
         rotateRight(arr3);
-
         System.out.println("Kaydirilmis dizi: " + Arrays.toString(arr3));
+
+        System.out.println("==============================================================");
+
+        System.out.println("Bir cumle gir, ya da kelime girin: ");
+        String plndrom = scanner.nextLine();
+
+        if (isPalindrome(plndrom)){
+            System.out.println("Evet, palindrom!");
+        }else {
+            System.out.println("Hayır, palindrom değil!");
+        }
 
     }
 
