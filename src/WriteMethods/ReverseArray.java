@@ -42,6 +42,11 @@ public class ReverseArray {
             System.out.println("Hayır, palindrom değil!");
         }
 
+        System.out.println("==============================================================");
+
+        int[] arr4 = {4, 7, 1, 9, 2, 12, 5, 22, 15};
+        findMinMax(arr4);
+
     }
 
     public static int[] reverseArray(int[] arr){
@@ -83,5 +88,16 @@ public class ReverseArray {
     public static boolean isPalindrome(String str) {
         String reversed = new StringBuilder(str).reverse().toString();
         return str.equalsIgnoreCase(reversed);
+    }
+
+    public static void findMinMax(int[] arr){
+        int min = arr[0];
+        int max = arr[0];
+        for (int each : arr) {
+            if (each < min) min = each;
+            if (each > max) max = each;
+        }
+        System.out.println("En küçük: " + min);
+        System.out.println("En büyük: " + max);
     }
 }
