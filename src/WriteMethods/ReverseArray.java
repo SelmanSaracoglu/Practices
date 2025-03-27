@@ -5,9 +5,11 @@ import java.util.Scanner;
 
 public class ReverseArray {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5}; // Örnek dizi
-        int[] reversedArray = reverseArray(array);
+        int[] arr1 = {1, 2, 3, 4, 5}; // Örnek dizi
+        int[] reversedArray = reverseArray(arr1);
         System.out.println("Tersine çevrilmiş dizi: " + Arrays.toString(reversedArray));
+
+        System.out.println("=============================================================");
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Bir kelime girin: ");
@@ -17,8 +19,18 @@ public class ReverseArray {
         System.out.println("Ters çevrilmiş kelime: " + reversedInput);
         scanner.close();
 
+        System.out.println("=============================================================");
 
+        int[] arr2 = {10,20,30,40,50};
+        swapFisrtLast(arr2);
+        System.out.println("Yeni dizi: " + Arrays.toString(arr2));
 
+        System.out.println("==============================================================");
+
+        int[] arr3 = {1, 2, 3, 4, 5};
+        rotateRight(arr3);
+
+        System.out.println("Kaydirilmis dizi: " + Arrays.toString(arr3));
 
     }
 
@@ -37,5 +49,29 @@ public class ReverseArray {
     public static String reverseString(String str){
         StringBuilder sb = new StringBuilder(str);
         return sb.reverse().toString();
+    }
+
+    public static void swapFisrtLast(int[] arr) {
+        if (arr.length>1){
+            int temp = arr[0];
+            arr[0] = arr[arr.length-1];
+            arr[arr.length-1] = temp;
+        }
+    }
+
+    public static void rotateRight(int[] arr) {
+        if (arr.length > 1) {
+            int last = arr[arr.length-1];
+
+            for (int i = arr.length-1; i > 0 ; i--) {
+                arr[i] = arr[i-1];
+            }
+            arr[0] =last;
+        }
+    }
+
+    public static boolean isPalindrome(String str) {
+        String reversed = new StringBuilder(str).reverse().toString();
+        return str.equalsIgnoreCase(reversed);
     }
 }
